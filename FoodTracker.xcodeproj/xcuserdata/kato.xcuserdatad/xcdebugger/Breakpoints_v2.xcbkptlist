@@ -14,10 +14,10 @@
             filePath = "FoodTracker/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "imagePickerControllerDidCancel(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

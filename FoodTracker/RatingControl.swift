@@ -10,7 +10,11 @@ import UIKit
 class RatingControl: UIStackView {
     //MARK: Properties
     private var ratingButtons = [UIButton]()
-    var rating = 0
+    var rating = 0 {
+        didSet {
+            updateButtonSelectionStates()
+        }
+    }
     @IBInspectable var starSize : CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
             setupButtons()
@@ -35,7 +39,18 @@ class RatingControl: UIStackView {
     
     //MARK: Button Action
     @objc func ratingButtonTapped(button: UIButton) {
-        print("👍")
+        //print("👍")
+        guard let ix = ratingButtons.firstIndex(of: button) else {
+            fatalError("The button, \(button) is not in the ratingButtons array: \(ratingButtons)")
+        }
+        // Calculate the rating of the selected button
+        let selectedRating = ix + 1
+        if selectedRating == rating {
+            rating = 0
+        } else {
+            // Otherwise set the rating to the selected star
+            rating = selectedRating
+        }
     }
     
     //MARK: Private Methods
@@ -74,6 +89,9 @@ class RatingControl: UIStackView {
             button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
             button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
             
+            // Set the accessibility label
+            button.accessibilityLabel = "Set \(ix+1) star rating"
+            
             // Setup the button action
             button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchUpInside)
                         
@@ -82,6 +100,35 @@ class RatingControl: UIStackView {
 
             // Add the new button to the rating button array
             ratingButtons.append(button)
+        }
+        updateButtonSelectionStates()
+    }
+    
+    private func updateButtonSelectionStates() {
+        for (ix, button) in ratingButtons.enumerated() {
+            // If the index of a button is less than the rating, that button should be selected
+            button.isSelected = ix < rating
+            
+            // Set the hint string for the currentry selected star
+            let hintString : String?
+            if rating == ix + 1 {
+                hintString = "Tap to reset the rating to zero"
+            } else {
+                hintString = nil
+            }
+            // Calcurate the value string
+            let valueString : String
+            switch (rating) {
+            case 0:
+                valueString = "No rating set."
+            case 1:
+                valueString = "1 star set."
+            default:
+                valueString = "\(rating) stars set."
+            }
+            // Assingn the hint string and value string
+            button.accessibilityHint = hintString
+            button.accessibilityValue = valueString
         }
     }
 }
