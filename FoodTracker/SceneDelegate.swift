@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  FoodTracker
 //
-//  Created by 加藤　康久 on 2020/12/04.
+//  Created by chiaki on 2020/12/04.
 //
 
 import UIKit
