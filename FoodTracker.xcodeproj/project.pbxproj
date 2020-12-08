@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4111F30A257F52F5006BDA4C /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4111F309257F52F5006BDA4C /* MealTableViewCell.swift */; };
 		414E9803257A199C0047BB21 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E9802257A199C0047BB21 /* RatingControl.swift */; };
 		414E9808257DD18E0047BB21 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E9807257DD18E0047BB21 /* Meal.swift */; };
 		4184546B2579C81A00A09828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184546A2579C81A00A09828 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4111F309257F52F5006BDA4C /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		414E9802257A199C0047BB21 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		414E9807257DD18E0047BB21 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		418454672579C81A00A09828 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 				4184546C2579C81A00A09828 /* SceneDelegate.swift */,
 				4184546E2579C81A00A09828 /* ViewController.swift */,
 				414E9802257A199C0047BB21 /* RatingControl.swift */,
+				4111F309257F52F5006BDA4C /* MealTableViewCell.swift */,
 				414E9807257DD18E0047BB21 /* Meal.swift */,
 				418454702579C81A00A09828 /* Main.storyboard */,
 				418454732579C81B00A09828 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 			files = (
 				414E9808257DD18E0047BB21 /* Meal.swift in Sources */,
 				414E9803257A199C0047BB21 /* RatingControl.swift in Sources */,
+				4111F30A257F52F5006BDA4C /* MealTableViewCell.swift in Sources */,
 				4184546F2579C81A00A09828 /* ViewController.swift in Sources */,
 				4184546B2579C81A00A09828 /* AppDelegate.swift in Sources */,
 				4184546D2579C81A00A09828 /* SceneDelegate.swift in Sources */,
