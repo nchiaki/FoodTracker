@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "IMG_0025-1.heic",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "5B5058FB-EC0F-4C7F-AF65-7860596FF359_1_105_c.jpeg",
+      "filename" : "IMG_0025.heic",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "IMG_0025-2.heic",
       "idiom" : "universal",
       "scale" : "3x"
     }
