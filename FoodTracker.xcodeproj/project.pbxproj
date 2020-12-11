@@ -18,6 +18,7 @@
 		418454772579C81B00A09828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418454752579C81B00A09828 /* LaunchScreen.storyboard */; };
 		418454822579C81B00A09828 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418454812579C81B00A09828 /* FoodTrackerTests.swift */; };
 		4184548D2579C81B00A09828 /* FoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4184548C2579C81B00A09828 /* FoodTrackerUITests.swift */; };
+		41993E37258057CF00852034 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41993E36258057CF00852034 /* MealTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		418454882579C81B00A09828 /* FoodTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4184548C2579C81B00A09828 /* FoodTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerUITests.swift; sourceTree = "<group>"; };
 		4184548E2579C81B00A09828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41993E36258057CF00852034 /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				4184546E2579C81A00A09828 /* ViewController.swift */,
 				414E9802257A199C0047BB21 /* RatingControl.swift */,
 				4111F309257F52F5006BDA4C /* MealTableViewCell.swift */,
+				41993E36258057CF00852034 /* MealTableViewController.swift */,
 				414E9807257DD18E0047BB21 /* Meal.swift */,
 				418454702579C81A00A09828 /* Main.storyboard */,
 				418454732579C81B00A09828 /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 			files = (
 				414E9808257DD18E0047BB21 /* Meal.swift in Sources */,
 				414E9803257A199C0047BB21 /* RatingControl.swift in Sources */,
+				41993E37258057CF00852034 /* MealTableViewController.swift in Sources */,
 				4111F30A257F52F5006BDA4C /* MealTableViewCell.swift in Sources */,
 				4184546F2579C81A00A09828 /* ViewController.swift in Sources */,
 				4184546B2579C81A00A09828 /* AppDelegate.swift in Sources */,
