@@ -15,8 +15,9 @@ class Meal {
     
     //MARK: Initialization
     init?(name:String, photo:UIImage?, rating:Int) {
+        print("Meal.init")
 
-        guard name.isEmpty else {
+        guard !name.isEmpty else {
             return nil
         }
         guard (0 <= rating) && (rating <= 5) else {
@@ -27,7 +28,6 @@ class Meal {
         self.name = name
         self.photo = photo!
         self.rating = rating
-        
     }
 }
 
