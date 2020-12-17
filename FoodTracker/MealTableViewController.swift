@@ -68,6 +68,7 @@ class MealTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             meals.remove(at: indexPath.row)
+            saveMeals()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -134,6 +135,8 @@ class MealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            // Save the meals
+            saveMeals()
         }
     }
 
@@ -162,5 +165,24 @@ class MealTableViewController: UITableViewController {
         print("meal3 \(meal3.name) \(meal3.photo) ")
 
         meals += [meal1, meal2, meal3]
+    }
+    
+    private func saveMeals() {
+        let isSuccessfulSave = try! NSKeyedArchiver.archivedData(withRootObject: meals, requiringSecureCoding: false)
+        if isSuccessfulSave.isEmpty {
+            os_log("Faild to save meals...", log :OSLog.default, type:.error)
+        } else {
+            os_log("Meals successfully saved.", log :OSLog.default, type:.debug)
+            UserDefaults.standard.set(isSuccessfulSave, forKey: "meals")
+        }
+    }
+    
+    private func loadMeals() -> [Meal]? {
+        let data = UserDefaults.standard.data(forKey: "meals")
+        if data == nil {
+            return nil
+        } else {
+            return try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData((data)!) as? [Meal]
+        }
     }
 }
