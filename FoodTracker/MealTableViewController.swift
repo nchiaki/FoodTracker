@@ -25,11 +25,9 @@ class MealTableViewController: UITableViewController {
         if let savedMeals = loadMeals() {
             meals += savedMeals
         } else {
+            //Load the sample data
             loadSampleMeals()
         }
-        
-        //Load the sample data
-        loadSampleMeals()
     }
 
     // MARK: - Table view data source
@@ -175,6 +173,7 @@ class MealTableViewController: UITableViewController {
     }
     
     private func saveMeals() {
+        print("saveMeals: \(Meal.ArchiveURL.path)")
         let isSuccessfulSave = try! NSKeyedArchiver.archivedData(withRootObject: meals, requiringSecureCoding: false)
         if isSuccessfulSave.isEmpty {
             os_log("Faild to save meals...", log :OSLog.default, type:.error)
@@ -185,6 +184,7 @@ class MealTableViewController: UITableViewController {
     }
     
     private func loadMeals() -> [Meal]? {
+        print("loadMeals: \(Meal.ArchiveURL.path)")
         let data = UserDefaults.standard.data(forKey: "meals")
         if data == nil {
             return nil
